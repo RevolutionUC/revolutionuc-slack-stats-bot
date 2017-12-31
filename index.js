@@ -21,7 +21,7 @@ module.exports.run = (event, context, callback) => {
         .then(memberCount => {
             // prepare the slack message and hit the slack webhook url
             const randomEmoji = [1,2,3].map(() => `:${emoji.random().key}:`).join(' ')
-            const slackMessage = `Mailing list subscriber count as of today: *${memberCount}*`
+            const slackMessage = `Mailing list subscriber count as of today: *${memberCount}* ${randomEmoji}`
             const options = {
                 method: 'POST',
                 uri: slackWebhookUrl,
