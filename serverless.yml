@@ -11,6 +11,8 @@ provider:
 package:
   exclude:
     - .git/**
+    - .env
+    - test.js
 
 functions:
   run:

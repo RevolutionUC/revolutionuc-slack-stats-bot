@@ -5,7 +5,20 @@
   "main": "index.js",
   "author": "Noah Bass <noah@noahbass.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "coverage": "./node_modules/.bin/nyc report --reporter=text ./node_modules/.bin/mocha",
+    "coverage-codecov": "./node_modules/.bin/nyc report --reporter=text-lcov > coverage.lcov ./node_modules/.bin/mocha"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0",
+    "nock": "^9.1.6",
+    "nyc": "^11.4.1",
+    "proxyquire": "^1.8.0",
     "serverless": "^1.25.0"
   },
   "dependencies": {

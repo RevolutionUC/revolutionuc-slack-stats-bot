@@ -1,6 +1,8 @@
 # mailchimp-slack-list-updates
 
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
+[![Build Status](https://travis-ci.org/noahbass/mailchimp-slack-list-updates.svg?branch=master)](https://travis-ci.org/noahbass/mailchimp-slack-list-updates)
+[![Code Coverage](https://img.shields.io/coveralls/github/noahbass/mailchimp-slack-list-updates/master.svg)](https://codecov.io/gh/noahbass/mailchimp-slack-list-updates)
 ![MIT license](https://img.shields.io/github/license/noahbass/mailchimp-slack-list-updates.svg)
 ![GitHub tag](https://img.shields.io/github/tag/noahbass/mailchimp-slack-list-updates.svg)
 
@@ -22,11 +24,11 @@ Mailing list subscriber count as of today: *80* :dromedary_camel: :open_book: :b
 
 ## Deploy
 
-You'll need these to get started:
+Follow these steps to get started. You'll need:
 
-* [A MailChimp api key](https://kb.mailchimp.com/integrations/api-integrations/about-api-keys#Find-or-Generate-Your-API-Key): `MAILCHIMP_API_KEY`
-* [A MailChimp list id](https://kb.mailchimp.com/lists/manage-contacts/find-your-list-id): `MAILCHIMP_LIST_ID`
-* [A Slack incoming webhook](https://my.slack.com/services/new/incoming-webhook/): `SLACK_WEBHOOK_URL`
+* [A MailChimp api key](https://kb.mailchimp.com/integrations/api-integrations/about-api-keys#Find-or-Generate-Your-API-Key) (`MAILCHIMP_API_KEY`)
+* [A MailChimp list id](https://kb.mailchimp.com/lists/manage-contacts/find-your-list-id) (`MAILCHIMP_LIST_ID`)
+* [A Slack incoming webhook](https://my.slack.com/services/new/incoming-webhook/) (`SLACK_WEBHOOK_URL`)
 
 Then, to deploy:
 
@@ -41,3 +43,7 @@ To test immediately (without waiting for the scheduled event), invoke the functi
 ```sh
 $ serverless invoke --function run
 ```
+
+## Test
+
+Run tests with `npm test`. Check code coverage with `npm run coverage`.
