@@ -1,6 +1,6 @@
 {
   "name": "mailchimp-slack-notify",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Get mailing list updates from MailChimp in your Slack channel",
   "main": "index.js",
   "author": "Noah Bass <noah@noahbass.com>",
