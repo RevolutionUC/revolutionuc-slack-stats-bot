@@ -7,8 +7,8 @@
   "license": "MIT",
   "scripts": {
     "test": "./node_modules/.bin/mocha",
-    "coverage": "./node_modules/.bin/nyc report --reporter=text ./node_modules/.bin/mocha",
-    "coverage-codecov": "./node_modules/.bin/nyc report --reporter=text-lcov > coverage.lcov ./node_modules/.bin/mocha"
+    "coverage": "./node_modules/.bin/nyc --reporter=text ./node_modules/.bin/mocha",
+    "coverage-codecov": "./node_modules/.bin/nyc --reporter=text-lcov > coverage.lcov ./node_modules/.bin/mocha"
   },
   "engines": {
     "node": ">=6.0.0"
