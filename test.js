@@ -22,18 +22,15 @@ describe('mailchimp-slack-list-updates', () => {
             .get(`/lists/${mailchimpListId}?fields=stats`)
             .reply(200, { stats: { member_count: 10 } })
         // POST request to the Slack api
-        nock('https://hooks.slack.com/services/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')
+        nock(slackWebhookUrl)
             .post('', { text: 'Mailing list subscriber count as of today: *10* :dragon: :dragon: :dragon:' })
             .reply(200, {})
     })
 
     it('should retrieve from MailChimp and post to Slack', (done) => {
-        indexMock.run(null, null, (error, result) => {
-            if (error) {
-                throw new Error(error)
-            }
-
+        indexMock.run({}, {}, (error, result) => {
             assert.isOk(result)
+            assert.isNotOk(error)
             assert.isTrue(result.message.ok)
             done()
         })
