@@ -1,9 +1,9 @@
 {
-  "name": "mailchimp-slack-notify",
-  "version": "1.0.2",
-  "description": "Get mailing list updates from MailChimp in your Slack channel",
+  "name": "revolutionuc-stats-slacker",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "author": "Noah Bass <noah@noahbass.com>",
+  "author": "Isiah Lloyd <lloyd@isiah.me>",
   "license": "MIT",
   "scripts": {
     "test": "./node_modules/.bin/mocha",
@@ -14,17 +14,10 @@
     "node": ">=6.0.0"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^4.1.0",
-    "nock": "^9.1.6",
-    "nyc": "^11.4.1",
-    "proxyquire": "^1.8.0",
-    "serverless": "^1.25.0"
+    "serverless": "^1.25.0",
+    "serverless-dotenv-plugin": "^2.1.1"
   },
   "dependencies": {
-    "dotenv": "^4.0.0",
-    "mailchimp-api-v3": "^1.8.0",
-    "node-emoji": "^1.8.1",
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
   }

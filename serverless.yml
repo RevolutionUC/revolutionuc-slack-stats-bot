@@ -1,10 +1,10 @@
-service: mailchimp-slack-list-updates
+service: revuc-slack-stats
 
 frameworkVersion: ">=1.0.0 <2.0.0"
 
 provider:
   name: aws
-  runtime: nodejs6.10
+  runtime: nodejs12.x
   region: us-east-2
   memorySize: 128
 
@@ -12,10 +12,14 @@ package:
   exclude:
     - .git/**
     - .env
-    - test.js
+plugins:
+  - serverless-dotenv-plugin
 
 functions:
   run:
     handler: index.run
     events:
-      - schedule: rate(2 days)
+      - schedule: cron(0 2 * * ? *)
+    environment:
+      REVUC_API_KEY: ${env:REVUC_API_KEY}
+      SLACK_WEBHOOK_URL: ${env:SLACK_WEBHOOK_URL}
